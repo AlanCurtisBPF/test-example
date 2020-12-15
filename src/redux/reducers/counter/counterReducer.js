@@ -11,7 +11,6 @@ const counterReducer = (state = initialState, action) => {
   let updateState;
   switch (action.type) {
     case types.INCREMENT_COUNTER:
-      console.log({action})
       updateState= Object.assign({}, state, {...action.payload});
       return updateState
     case types.DECREMENT_COUNTER:
