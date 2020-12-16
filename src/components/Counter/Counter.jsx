@@ -33,7 +33,6 @@ const Counter = (props) => {
       <button onClick={handlePlus}>+</button>
       <button onClick={handleMinus}>-</button>
       <button onClick={handleReset}>reset</button>
-      <button onClick={() => console.log(props)}>Log</button>
       <div>margin to increase or decrease by</div>
       <input
         type="number"
