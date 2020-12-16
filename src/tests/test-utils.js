@@ -1,16 +1,19 @@
+// We're using our own custom render function and not RTL's render
+// our custom utils also re-export everything from RTL
+// so we can import fireEvent and screen here as well
+// for testing components connected to Redux
+
 // test-utils.js
 import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-// Import your own reducer
-import rootReducer from '../redux/rootReducer';
+import configureStore from '../redux/configureStore';
 
 function render(
   ui,
   {
     initialState,
-    store = createStore(rootReducer, initialState),
+    store = configureStore(),
     ...renderOptions
   } = {}
 ) {
