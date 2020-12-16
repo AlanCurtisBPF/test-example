@@ -24,7 +24,7 @@ const Counter = (props) => {
     <div className="Conter">
       Counter Comp
       <div>Count</div>
-      <div>{count}</div>
+      <div data-testid='count' >{count}</div>
       <button onClick={handlePlus}>+</button>
       <button onClick={handleMinus}>-</button>
       <button onClick={handleReset}>reset</button>
